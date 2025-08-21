@@ -88,7 +88,7 @@ export const Projects = () => {
                            The code is modular, handling movement, collisions, drawing, and game logic in separate functions.
                         </p>
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {["React", "Node.js", "Javascript", "HTML"].map((tech, key) => (
+                            {["pygame", "Node.js", "python", "HTML"].map((tech, key) => (
                                 <span
                                     key={key}
                                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
