@@ -9,17 +9,16 @@ export const Contact = () => {
         message: "",
     });
 
+    const SERVICE_ID = "service_mbfs56s";
+    const TEMPLATE_ID = "template_b92yy2j";
+    const PUBLIC_KEY = "D6XqrGPv5zDyl9ubh";
+
     const handleSubmit =(e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         emailjs
-        .sendForm(
-            import.meta.env.VITE_SERVICE_ID, 
-            import.meta.env.VITE_TEMPLATE_ID, 
-            e.target, 
-            import.meta.env.VITE_PUBLIC_KEY
-        )
-        .then((result) => {
+        .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+        .then(() => {
             alert("Message Sent!");
             setFormData({ name: "", email: "", message: "" });
         })
@@ -29,11 +28,11 @@ export const Contact = () => {
     return (
       <section 
         id="contact"
-        className="min-h screen flex items-center justify-center py-20"
+        className="min-h-screen flex items-center justify-center py-20"
     >
         <RevealOnScroll>
             <div className="px-4 w-150">
-                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 t0-cyan-400 bg-clip-text text-transparent text-center">
+                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
                     {" "}
                      Get In Touch 
                  </h2>      
